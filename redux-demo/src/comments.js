@@ -35,7 +35,7 @@ function comments(state = [], action) {
         case THUMB_DOWN_COMMENT:
             return state.map(comment => {
                 if (comment.id === action.id) {
-                    comments.votes = comment.votes + 1;
+                    comment.votes = comment.votes - 1;
                 }
 
                 return comment;
